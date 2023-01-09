@@ -1,0 +1,88 @@
+.portfolio__container {
+    text-align: center;
+}
+
+.portfolio__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.portfolio__item {
+    padding: 2rem;
+    border-radius: 3rem;
+    border: 3px solid transparent;
+    background: var(--color-lightshade);
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.portfolio__item:hover {
+    border: 3px solid var(--color-darkaccent);
+    background: transparent;
+}
+
+.portfolio__item img {
+    border-radius: 1rem;
+    aspect-ratio: 3/2;
+    border: 3px solid transparent;
+    transition: var(--transition);
+}
+
+.portfolio__item img:hover {
+    border-radius: 1rem;
+    opacity: .7;
+    border: 3px solid var(--color-darkaccent);
+}
+
+.portfolio__item h3 {
+    margin: 1rem;
+}
+
+.stacks__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.frontend__container,.backend__container{
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    margin: .25rem 0rem;
+}
+
+.portfolio__item-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+    .portfolio__items {
+        margin: 0 auto;
+        width: 85%;
+    }
+    .stacks__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/* TEMP FIX for .portfolio__items not responding properly */
+@media screen and (max-width: 900px) {
+    .portfolio__items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio__items {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

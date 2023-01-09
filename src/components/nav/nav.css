@@ -1,0 +1,48 @@
+nav {
+    background: var(--color-main);
+    width: max-content;
+    padding: 0.5rem 1.5rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    gap: 0.6rem;
+    border-radius: 5rem;
+    opacity: .85;
+}
+
+nav a {
+    background: transparent;
+    padding: .6rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-text);
+}
+
+nav a.active {
+    background: var(--color-lightshade);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 0.6rem 1.7rem;
+        bottom: 2.5rem;
+    }
+    nav a {
+        padding: .5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0.6rem 1.7rem;
+        bottom: 2.5rem;
+        max-width: 95%;
+    }
+    nav a {
+        padding: .4rem;
+    }
+}
